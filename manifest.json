@@ -1,0 +1,24 @@
+{
+  "name": "simple-editor",
+  "short_name": "simple-editor",
+  "theme_color": "#2D2241",
+  "background_color": "#2D2241",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/simple-editor/",
+  "start_url": "/simple-editor/",
+  "icons": [
+    {
+      "src": "pwa/manifest-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "pwa/manifest-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
