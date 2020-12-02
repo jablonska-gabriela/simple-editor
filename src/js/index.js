@@ -1,9 +1,17 @@
-import '../scss/main.scss';
+import "../scss/main.scss";
 
-// uncomment the lines below to enable PWA
-// import {registerSW} from './pwa.js';
-// registerSW();
+const textarea = document.querySelector(".main__textarea");
+const save = document.querySelector(".save--js");
+const load = document.querySelector(".load--js");
 
-/* place your code below */
+save.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.setItem("textarea", textarea.value);
+});
+load.addEventListener("click", (e) => {
+  e.preventDefault();
+  textarea.value = localStorage.getItem("textarea");
+});
+console.log('hello');
 
-console.log('HELLO 🚀')
+

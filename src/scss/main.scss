@@ -3,11 +3,49 @@
 @import "_variables";
 @import "modules/hello.scss";
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  background-color: #eeeeee;
+  grid-template-areas:
+    "h1 . ."
+    "main . ."
+    "load save .";
+    padding: 16px;
+}
+.main {
+  grid-area: main;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 150px;
+  &__heading {
+    grid-area: h1;
+    font-size: 44px;
+    width: 100%;
+    margin: 152px 0 40px;
+  }
+  &__textarea {
+    width: 100%;
+    max-width: 736px;
+    min-height: 300px;
+    margin: 0 0 32px;
+  }
+}
+
+.load--js {
+  grid-area: load;
+  width: 64px;
+  height: 40px;
+}
+.save--js {
+  grid-area: save;
+  width: 64px;
+  height: 40px;
 }
